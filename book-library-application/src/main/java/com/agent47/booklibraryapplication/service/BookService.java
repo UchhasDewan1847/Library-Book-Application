@@ -18,4 +18,6 @@ public interface BookService {
     String updateBook(Book book, String bookId);
 
     String deleteByName(String name);
+
+    void addBooks(List<Book> books);
 }

@@ -2,7 +2,7 @@ package com.agent47.booklibraryapplication.service;
 
 import com.agent47.booklibraryapplication.dto.UserDto;
 import com.agent47.booklibraryapplication.entity.BookUser;
-import com.agent47.booklibraryapplication.exception.UserNotFoundException;
+import com.agent47.booklibraryapplication.repository.BookRepository;
 import com.agent47.booklibraryapplication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

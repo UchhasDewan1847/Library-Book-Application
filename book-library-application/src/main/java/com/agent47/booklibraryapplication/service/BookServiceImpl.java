@@ -41,6 +41,12 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
+    public void addBooks(List<Book> books) {
+        bookRepository.saveAll(books);
+
+    }
+
+    @Override
     public String updateBook(Book book, String bookId) {
         Book book1=bookRepository.findById(UUID.fromString(bookId)).get();
         if(Objects.nonNull(book.getBookName())&& (!"".equalsIgnoreCase(book.getBookName()))){
