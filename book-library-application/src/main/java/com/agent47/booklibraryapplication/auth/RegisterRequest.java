@@ -1,5 +1,4 @@
-package com.agent47.booklibraryapplication.dto;
-
+package com.agent47.booklibraryapplication.auth;
 
 import com.agent47.booklibraryapplication.entity.Role;
 import lombok.AllArgsConstructor;
@@ -7,17 +6,17 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Builder
-public class UserDto {
-    private UUID userId;
+@AllArgsConstructor
+@NoArgsConstructor
+
+public class RegisterRequest {
     private String firstName;
     private String lastName;
-    private String address;
+    private String email;
+    private String password;
     private Role role;
+    private String address;
 
-    // Constructors, getters, setters, and other methods can be added here.
 }

@@ -44,18 +44,6 @@ public class UserServiceImpl implements UserService{
     @Override
     public UserDto getUserInfo(UUID userUuid) {
 
-//        bookUser = userRepository.findById(userUuid).get();
-//
-//
-//
-//        return new UserDto(
-//                bookUser.getUserId(),
-//                bookUser.getFirstName(),
-//                bookUser.getLastName(),
-//                bookUser.getAddress(),
-//                bookUser.getRole()
-//        );
-
         Optional<BookUser> userOptional = userRepository.findById(userUuid);
 
         if (userOptional.isPresent()) {
