@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/auth/book_management")
 public class BookController {
     @Autowired
     private BookServiceImpl bookServiceimpl;
@@ -18,7 +19,7 @@ public class BookController {
         return bookServiceimpl.getAllBooks();
     }
     @GetMapping("/books/id/{id}")
-    public Book getById(@PathVariable("id") String bookid){
+    public Book getById(@PathVariable("id") Double bookid){
         return bookServiceimpl.getById(bookid);
     }
 
@@ -32,7 +33,7 @@ public class BookController {
         return bookServiceimpl.addBook(book);
     }
     @PutMapping("/books/update/{id}")
-    public  String updateBook(@RequestBody Book book,@PathVariable("id") String bookId){
+    public  String updateBook(@RequestBody Book book,@PathVariable("id") Double bookId){
         return bookServiceimpl.updateBook(book,bookId);
     }
 

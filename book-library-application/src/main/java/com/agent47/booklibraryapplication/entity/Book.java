@@ -16,10 +16,8 @@ import java.util.UUID;
 @Data
 public class Book {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.UUID
-    )
-    private UUID bookId;
+    @GeneratedValue
+    private Double bookId;
     private String bookName;
     private String authorName;
     private Double bookOnStock;

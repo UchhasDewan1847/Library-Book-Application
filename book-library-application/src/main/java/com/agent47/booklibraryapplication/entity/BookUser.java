@@ -28,21 +28,19 @@ import java.util.UUID;
 )
 public class BookUser implements UserDetails {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.UUID
-    )
-    private UUID userId;
+    @GeneratedValue
+    private Integer userId;
     private String firstName;
     private String lastName;
     @NotBlank
     @Column(
-            name = "email",
+
             nullable = false
     )
     private String email;
     @NotBlank
     @Column(
-            name = "password",
+
             nullable = false
 
     )

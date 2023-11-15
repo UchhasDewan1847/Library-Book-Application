@@ -9,5 +9,5 @@ import java.util.UUID;
 public interface UserService {
     String loginUser(String email, String password);
 
-    UserDto getUserInfo(UUID userUuid);
+    UserDto getUserInfo(Integer userUuid);
 }

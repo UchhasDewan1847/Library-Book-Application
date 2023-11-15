@@ -9,13 +9,13 @@ import java.util.List;
 public interface BookService {
     List<Book> getAllBooks();
 
-    Book getById(String bookid);
+    Book getById(Double bookid);
 
     Book getByAuthorName(String authorName);
 
     String addBook(Book book);
 
-    String updateBook(Book book, String bookId);
+    String updateBook(Book book, Double bookId);
 
     String deleteByName(String name);
 

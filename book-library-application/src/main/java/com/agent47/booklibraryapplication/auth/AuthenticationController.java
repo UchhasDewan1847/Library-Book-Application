@@ -23,4 +23,8 @@ public class AuthenticationController {
         return new ResponseEntity<>("Registration Unsuccessful",HttpStatus.BAD_REQUEST);
 
     }
+    @PostMapping("/authenticate")
+    public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest authenticationRequest){
+        return ResponseEntity.ok(authenticationService.authenticate(authenticationRequest));
+    }
 }

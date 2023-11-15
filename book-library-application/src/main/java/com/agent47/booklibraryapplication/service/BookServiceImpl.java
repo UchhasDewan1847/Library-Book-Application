@@ -25,8 +25,8 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public Book getById(String bookid) {
-        return bookRepository.findById(UUID.fromString(bookid)).get();
+    public Book getById(Double bookid) {
+        return bookRepository.findById(bookid).get();
     }
 
     @Override
@@ -47,8 +47,8 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public String updateBook(Book book, String bookId) {
-        Book book1=bookRepository.findById(UUID.fromString(bookId)).get();
+    public String updateBook(Book book, Double bookId) {
+        Book book1=bookRepository.findById(bookId).get();
         if(Objects.nonNull(book.getBookName())&& (!"".equalsIgnoreCase(book.getBookName()))){
             book1.setBookName(book.getBookName());
         }

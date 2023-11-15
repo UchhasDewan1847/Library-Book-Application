@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface UserRepository extends JpaRepository<BookUser, UUID> {
+public interface UserRepository extends JpaRepository<BookUser, Integer> {
     public BookUser findByEmail(String email);
 }

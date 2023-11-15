@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public UserDto getUserInfo(UUID userUuid) {
+    public UserDto getUserInfo(Integer userUuid) {
 
         Optional<BookUser> userOptional = userRepository.findById(userUuid);
 
