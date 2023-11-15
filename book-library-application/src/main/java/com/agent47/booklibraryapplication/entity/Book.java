@@ -24,5 +24,11 @@ public class Book {
     private UUID bookId;
     private String bookName;
     private String authorName;
+    private Double bookOnStock;
+    @ManyToMany(
+            mappedBy = "books",
+            cascade = CascadeType.ALL
+    )
+    private List<BookUser> bookUsers;
 
 }
