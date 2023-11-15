@@ -44,4 +44,16 @@ public class BookUser {
     private String password;
     private String address;
     private String role;
+    @ManyToMany(
+    )
+    @JoinTable(
+            name = "borrowed_books",
+            joinColumns = @JoinColumn(
+                    name = "user_id",
+                    referencedColumnName = "userId"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "book_id",
+            referencedColumnName = "bookId")
+    )
+    private List<Book> books;
 }
