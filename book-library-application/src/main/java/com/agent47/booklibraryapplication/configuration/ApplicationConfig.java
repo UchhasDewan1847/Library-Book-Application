@@ -20,6 +20,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class ApplicationConfig {
 //    @Autowired
     private final UserRepository userRepository;
+    //The UserDetailsService is a functional Interface and thats why in the code below a method reference is used to assign an implementation to the userdetailsservice bean 
+    // return Type = UserDetails
+// only method  name = loadUserByUsername(String username)
+//Locates the user based on the username or the string sent to the method.
     @Bean
     public UserDetailsService userDetailsService()throws UsernameNotFoundException {
             return userRepository::findByEmail;
