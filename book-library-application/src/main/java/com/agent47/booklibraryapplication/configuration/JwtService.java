@@ -54,9 +54,11 @@ public class JwtService {
         return Jwts
                 .builder()
                 .setClaims(claims)
+            // empty claims field
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis()+1000*60*60*24))
+            // we added only three claims in this project and all three of them are registered claims
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
