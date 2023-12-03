@@ -24,6 +24,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/book_management/**")
                 .permitAll()
+            //probabaly with another requestMatchers set and hasAuthority method will retrieve the string values of authority from the security context holder
                 .anyRequest()
                 .authenticated()
                 .and()
