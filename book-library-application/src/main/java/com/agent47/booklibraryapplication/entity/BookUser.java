@@ -60,6 +60,7 @@ public class BookUser implements UserDetails {
     private List<Book> books;
     private Role role;
 
+        //granted authority only contains and returns a string and that should be enough if that string can represent the amount of authority a user can have
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
